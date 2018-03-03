@@ -9,28 +9,24 @@ class VehiculosUpdateComponent {
   }
 
   $onInit(){
-  		this.vehiculosService.query({id:this.$stateParams.id}).$promise
+  		this.vehiculosService.get({id:this.$stateParams.idVehiculo}).$promise
   		.then(response => {
   			this.vehiculos = response;
-  			console.log(this.vehiculos);
+  			console.log(this.vehiculo);
   		})
   		.catch(err => console.error(err));
-
-  		
 	}
 
-  	update(){
-  		console.log("Hola");
-  		this.vehiculosService.update({id:this.vehiculos.id},this.vehiculos.id).$promise
+  	updateVehiculos(){
+  		this.vehiculosService.update({id:this.vehiculo.id}, this.vehiculo).$promise
   		.then(response => {
   			console.log("Vehiculo actualizado");
   			this.$state.go('vehiculos-list');
   		})
-  		.catch(err => console.error(err));
-  	}
-
-
-
+  		.catch(err => {
+      console.log("ERROR AL ACTUALIZAR",err);
+  	});
+  }
 }
 
 angular.module('palmiConApp')

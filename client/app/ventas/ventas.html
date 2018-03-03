@@ -1,0 +1,15 @@
+<section class="container" ng-cloak="">
+
+	<form name="ventasForm" ng-submit="vm.createVenta()">   	
+    	<select ng-model="vm.ventas.idCliente.id">
+              <option ng-repeat="item in vm.clientes" ng-value="{{item.id}}">{{item.nombres}}</option>
+    	</select>
+
+    	<select ng-model="vm.ventas.idVehiculos.id">
+              <option ng-repeat="item in vm.vehiculos" ng-value="{{item.id}}">{{item.marca}}</option>
+    	</select>
+
+		<button type="submit">Registrar</button>
+
+	</form>
+</section>

@@ -1,0 +1,19 @@
+<section class="container" ng-cloak="">
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Monto</th>
+				<th>Cliente</th>
+				<th>Vehiculo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.ventas">
+				<td>{{item.monto}}</td>
+				<td>{{item.idClientes.nombres}} {{item.idClientes.apellidos}}</td>
+				<td>{{item.idVehiculos.marca}} {{item.idVehiculos.modelo}}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
