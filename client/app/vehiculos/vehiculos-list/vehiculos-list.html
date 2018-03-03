@@ -1,0 +1,22 @@
+<section class="container" ng-cloak="">
+
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Marca</th>
+				<th>Modelo</th>
+				<th>Valor</th>
+				<th>Actualizar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.vehiculos">
+				<td>{{item.marca}}</td>
+				<td>{{item.modelo}}</td>
+				<td>{{item.valor}}</td>
+
+				<td><a class="btn btn-primary" ui-sref="vehiculos-update({idVehiculo:item.id})">Editar</a></td>
+			</tr>
+		</tbody>
+	</table>
+</section>

@@ -1,0 +1,19 @@
+<section class="container" ng-cloak="">
+	<form name="vehiculosForm" ng-submit="vm.update()">
+      <div class="Create-formTop">
+        <p class="Create-formTitle">Actualizar Vehiculo</p>
+      </div>
+
+
+	<label for="">Marca</label>
+    <input type="text" ng-model="vm.vehiculo.marca">
+
+    <label for="">Modelo</label>
+    <input type="text" ng-model="vm.vehiculo.modelo">
+
+    <label for="">Valor</label>
+    <input type="text" ng-model="vm.vehiculo.valor">
+
+	<button type="submit">Actualizar</button>
+	</form>
+</section>

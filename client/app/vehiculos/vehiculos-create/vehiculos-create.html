@@ -1,0 +1,17 @@
+<section class="container" ng-cloak="">
+
+	<form name="vehiculosForm" ng-submit="vm.createVehiculos()">
+
+   		<label for="">Marca</label>
+    	<input type="text" ng-model="vm.vehiculos.marca">
+
+    	<label for="">Modelo</label>
+    	<input type="text" ng-model="vm.vehiculos.modelo">
+
+    	<label for="">Valor</label>
+    	<input type="text" ng-model="vm.vehiculos.valor">
+
+		<button type="submit">Registrar</button>
+
+	</form>
+</section>
